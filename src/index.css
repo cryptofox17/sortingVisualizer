@@ -1,13 +1,133 @@
-body {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html, body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  background: #131320;
+  color: #bec6d1;
+  margin: auto 16px;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+
+.btn-container {
+  margin: 1.5em auto;
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 0.3em;
+ 
+}
+
+h2 {
+  margin-top: 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+button {
+  background: #1f2c5b;
+  color: #b8c9e4;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #22223a62;
+  cursor: pointer;
+  
+}
+
+button:hover {
+  background: #16162c;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.main {
+  display: flex;
+  padding: 16px;
+  width: 80%;
+  flex-wrap: wrap;
+}
+
+.orderDiv {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  margin: 0.8em 0;
+  justify-content: space-between;
+}
+.customDiv {
+  background: #1f1f39c2;
+  border-radius: 4px;
+  padding: 8px 32px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  
+}
+
+.slider {
+
+}
+
+.sortDiv {
+
+padding: 8px;
+width: 50%;
+border: 1px solid #aa94fb30;
+border-radius: 4px;
+}
+
+.bars {
+  height: 21px;
+  background: #1d2b64; /* fallback for old browsers #f09819 -50.83%, #edde5d*/
+  background: linear-gradient(190deg, #1d2b64 -50.83%, #c494fb 149.6%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 4px;
+  border-radius: 0 2px 2px 0;
+ 
+}
+
+select {
+  background-color:#303055;
+  color: #b1bed0;
+  padding: 4px 8px;
+  border: 1px solid #6e6ebd5c;
+  border-radius: 4px;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  outline: none;
+  margin: 0.5em auto 1em auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sortDiv, .customDiv {
+    width: 100%;
+  }
+
 }
